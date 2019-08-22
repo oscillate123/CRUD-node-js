@@ -3,7 +3,7 @@
         <% if (message != '') { %>
             <p class="text-center text-danger"><%= message %></p>
         <% } %>
-        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
+        <form class="add-user-form" action="" method="post" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <input type="text" class="form-control" name="first_name" id="first-name" placeholder="First Name" required>
@@ -29,11 +29,11 @@
                     </select>
                 </div>
                 <div class="col-md-12">
-                    <label for="player-img"><b>Player Image</b></label><br>
-                    <input type="file" name="image" id="player-img" class="" required>
+                    <label for="user-img"><b>User Image</b></label><br>
+                    <input type="file" name="image" id="user-img" class="" required>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary float-right">Add Player</button>
+            <button type="submit" class="btn btn-primary float-right">Add User</button>
         </form>
     </div>
 </div>

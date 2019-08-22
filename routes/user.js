@@ -1,12 +1,12 @@
 const fs = require('fs');
 
 module.exports = {
-    addPlayerPage: (req, res) => {
-        res.render('add-player.ejs', {
+    addUserPage: (req, res) => {
+        res.render('add-user.ejs', {
             message: '',
         });
     },
-    addPlayer: (req, res) => {
+    addUser: (req, res) => {
         if (!req.files) {
             return res.status(400).send("No files were uploaded.");
         }
@@ -22,15 +22,15 @@ module.exports = {
         let fileExtension = uploadedFile.mimetype.split('/')[1];
         image_name = username + '.' + fileExtension;
 
-        let usernameQuery = "SELECT * FROM `players` WHERE user_name = '" + username + "'";
+        let usernameQuery = "SELECT * FROM biostar_tna.user WHERE user_name = '" + username + "'";
 
         db.query(usernameQuery, (err, result) => {
             if (err) {
                 return res.status(500).send(err);
             }
             if (result.length > 0) {
-                message = 'Username already exists';
-                res.render('add-player.ejs', {
+                message = 'username already exists';
+                res.render('add-user.ejs', {
                     message,
                 });
             } else {
@@ -41,8 +41,8 @@ module.exports = {
                         if (err) {
                             return res.status(500).send(err);
                         }
-                        // send the player's details to the database
-                        let query = "INSERT INTO `players` (first_name, last_name, position, number, image, user_name) VALUES ('" +
+                        // send the User's details to the database
+                        let query = "INSERT INTO biostar_tna.user (first_name, last_name, position, number, image, user_name) VALUES ('" +
                             first_name + "', '" + last_name + "', '" + position + "', '" + number + "', '" + image_name + "', '" + username + "')";
                         db.query(query, (err, result) => {
                             if (err) {
@@ -53,34 +53,34 @@ module.exports = {
                     });
                 } else {
                     message = "Invalid File format. Only 'gif', 'jpeg' and 'png' images are allowed.";
-                    res.render('add-player.ejs', {
+                    res.render('add-user.ejs', {
                         message,
                     });
                 }
             }
         });
     },
-    editPlayerPage: (req, res) => {
-        let playerId = req.params.id;
-        let query = "SELECT * FROM `players` WHERE id = '" + playerId + "' ";
+    editUserPage: (req, res) => {
+        let userId = req.params.id;
+        let query = "SELECT * FROM biostar_tna.user WHERE id = '" + userId + "' ";
         db.query(query, (err, result) => {
             if (err) {
                 return res.status(500).send(err);
             }
-            res.render('edit-player.ejs', {
-                player: result[0],
+            res.render('edit-user.ejs', {
+                user: result[0],
                 message: '',
             });
         });
     },
-    editPlayer: (req, res) => {
-        let playerId = req.params.id;
+    editUser: (req, res) => {
+        let userId = req.params.id;
         let first_name = req.body.first_name;
         let last_name = req.body.last_name;
         let position = req.body.position;
         let number = req.body.number;
 
-        let query = "UPDATE `players` SET `first_name` = '" + first_name + "', `last_name` = '" + last_name + "', `position` = '" + position + "', `number` = '" + number + "' WHERE `players`.`id` = '" + playerId + "'";
+        let query = "UPDATE biostar_tna.user SET `first_name` = '" + first_name + "', `last_name` = '" + last_name + "', `position` = '" + position + "', `number` = '" + number + "' WHERE `Users`.`id` = '" + UserId + "'";
         db.query(query, (err, result) => {
             if (err) {
                 return res.status(500).send(err);
@@ -88,10 +88,10 @@ module.exports = {
             res.redirect('/');
         });
     },
-    deletePlayer: (req, res) => {
-        let playerId = req.params.id;
-        let getImageQuery = 'SELECT image from `players` WHERE id = "' + playerId + '"';
-        let deleteUserQuery = 'DELETE FROM players WHERE id = "' + playerId + '"';
+    deleteUser: (req, res) => {
+        let userId = req.params.id;
+        let getImageQuery = 'SELECT image from biostar_tna.user WHERE id = "' + userId + '"';
+        let deleteUserQuery = 'DELETE FROM biostar_tna.user WHERE id = "' + userId + '"';
 
         db.query(getImageQuery, (err, result) => {
             if (err) {
