@@ -1,0 +1,762 @@
+Server running on port: 5000
+Connected to database
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
+ReferenceError: E:\pl_report_app\views\index.ejs:3
+    1| <% include partials/header.ejs %>
+    2|     <div class="table-wrapper">
+ >> 3|         <% if (user.length > 0) {%>
+    4|             <table class="table table-hovered">
+    5|                 <thead class="thead-dark">
+    6|                     <tr>
+
+user is not defined
+    at eval (eval at compile (E:\pl_report_app\node_modules\ejs\lib\ejs.js:633:12), <anonymous>:22:8)
+    at returnedFn (E:\pl_report_app\node_modules\ejs\lib\ejs.js:668:17)
+    at tryHandleCache (E:\pl_report_app\node_modules\ejs\lib\ejs.js:254:36)
+    at View.exports.renderFile [as engine] (E:\pl_report_app\node_modules\ejs\lib\ejs.js:485:10)
+    at View.render (E:\pl_report_app\node_modules\express\lib\view.js:135:8)
+    at tryRender (E:\pl_report_app\node_modules\express\lib\application.js:640:10)
+    at Function.render (E:\pl_report_app\node_modules\express\lib\application.js:592:3)
+    at ServerResponse.render (E:\pl_report_app\node_modules\express\lib\response.js:1012:7)
+    at Query.db.query (E:\pl_report_app\routes\index.js:10:17)
+    at Query.<anonymous> (E:\pl_report_app\node_modules\mysql\lib\Connection.js:525:10)
