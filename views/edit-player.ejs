@@ -4,31 +4,31 @@
         <p class="text-center text-danger"><%= message %></p>
     <% } %>
 
-    <% if (user) { %>
-        <form class="add-user-form" action="" method="post" enctype="multipart/form-data">
+    <% if (player) { %>
+        <form class="add-player-form" action="" method="post" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="first-name">First Name</label>
-                    <input type="text" class="form-control" name="first_name" id="first-name" value="<%= user.first_name %>" required>
+                    <input type="text" class="form-control" name="first_name" id="first-name" value="<%= player.first_name %>" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="last-name">Last Name</label>
-                    <input type="text" class="form-control" name="last_name" id="last-name" value="<%= user.last_name %>" required>
+                    <input type="text" class="form-control" name="last_name" id="last-name" value="<%= player.last_name %>" required>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="username">Username</label>
-                    <input type="text" class="form-control" name="username" id="username" value="<%= user.user_name %>" required disabled title="Username cannot be edited.">
+                    <input type="text" class="form-control" name="username" id="username" value="<%= player.user_name %>" required disabled title="Username cannot be edited.">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="number">Number</label>
-                    <input type="number" class="form-control" name="number" id="number" placeholder="Number" value="<%= user.number %>" required>
+                    <input type="number" class="form-control" name="number" id="number" placeholder="Number" value="<%= player.number %>" required>
                 </div>
                 <div class="form-group col-md-6">
                     <label for="position">Position</label>
                     <select id="position" name="position" class="form-control" required>
-                        <option selected><%= user.position %></option>
+                        <option selected><%= player.position %></option>
                         <option>Goalkeeper</option>
                         <option>Centre Back</option>
                         <option>Right Back</option>
@@ -42,10 +42,10 @@
                     </select>
                 </div>
             </div>
-            <button type="submit" class="btn btn-success float-right">Update User</button>
+            <button type="submit" class="btn btn-success float-right">Update Player</button>
         </form>
     <% } else { %>
-        <p class="text-center">User Not Found. Go <a href="/add">here</a> to add Users.</p>
+        <p class="text-center">Player Not Found. Go <a href="/add">here</a> to add players.</p>
     <% } %>
 </div>
 </div>

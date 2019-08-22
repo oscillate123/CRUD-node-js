@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 
 const {getHomePage} = require('./routes/index');
-const {addUserPage, addUser, deleteUser, editUser, editUserPage} = require('./routes/user');
+const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
 const port = 5000;
 
 // create connection to database
@@ -16,7 +16,7 @@ const db = mysql.createConnection ({
     port: '3312',
     user: 'root',
     password: 'ThinkVision.24',
-    database: 'biostar_tna'
+    database: 'socka'
 });
 
 // connect to database
@@ -40,11 +40,11 @@ app.use(fileUpload()); // configure fileupload
 // routes for the app
 
 app.get('/', getHomePage);
-app.get('/add', addUserPage);
-app.get('/edit/:id', editUserPage);
-app.get('/delete/:id', deleteUser);
-app.post('/add', addUser);
-app.post('/edit/:id', editUser);
+app.get('/add', addPlayerPage);
+app.get('/edit/:id', editPlayerPage);
+app.get('/delete/:id', deletePlayer);
+app.post('/add', addPlayer);
+app.post('/edit/:id', editPlayer);
 
 
 // set the app to listen on the port
