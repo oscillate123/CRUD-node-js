@@ -1,6 +1,6 @@
 module.exports = {
     getHomePage: (req, res) => {
-        let query = "SELECT * FROM biostar_tna.user"; // query database to get all the Users
+        let query = "SELECT * FROM `players` ORDER BY id ASC"; // query database to get all the players
 
         // execute query
         db.query(query, (err, result) => {
@@ -8,7 +8,7 @@ module.exports = {
                 res.redirect('/');
             }
             res.render('index.ejs', {
-                user: result,
+                players: result,
             });
         });
     },
