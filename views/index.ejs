@@ -14,12 +14,12 @@
                 <tbody>
                     <% users.forEach((user, index) => { %>
                         <tr>
-                            <th scope="row"><%= user.USRUID %></th>
-                            <td><%= user.NM %></td>
-                            <td><%= moment(user.CREATEDT).format('YYYY-MM-DD') %></td>
-                            <td><%= user.number %></td>
+                            <th scope="row"><%= employees.USRUID %></th>
+                            <td><%= employees.NM %></td>
+                            <td><%= moment(employees.CREATEDT).format('YYYY-MM-DD') %></td>
+                            <td><%= employees.number %></td>
                             <td>
-                                <a href="/employees/<%= user.user_id %>" rel="noopener" class="btn btn-sm btn-success">View</a>
+                                <a href="/employees/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">View</a>
                             </td>
                         </tr>
                     <% }) %>

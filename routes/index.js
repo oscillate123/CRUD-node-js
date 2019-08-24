@@ -2,16 +2,16 @@ const moment = require('moment');
 
 module.exports = {
     getHomePage: (req, res) => {
-        let query = "SELECT * FROM biostar_tna.user"; // query database to get all the Users
+        let employeesListQuery = "SELECT * FROM biostar2_ac.t_usr"; // query database to get all the Users
 
         // execute query
-        db.query(query, (err, result) => {
+        db.query(employeesListQuery, (err, result) => {
             // console.log(result);
             if (err) {
                 res.redirect('/');
             }
             res.render('index.ejs', {
-                users: result,
+                employees: result,
                 moment: moment,
             });
         });
