@@ -1,0 +1,53 @@
+<% include partials/header.ejs %>
+<div class="container">
+    <% if (user) {%>
+        <table class="table table-hovered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Personnummer</th>
+                    <th scope="col">View Employee list</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= user.USRID %></td>
+                    <td><%= user.NM %></td>
+                    <td><%= personnummer %></td>
+                    <td>
+                        <a href="/" rel="noopener" class="btn btn-sm btn-success">View</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p class="text-center">An error has occurd. Please contact support. <a href="/"> Go back to employee list</a></p>
+    <% } %>
+
+    <% if (timecard.length) { %>
+        <table class="table table-hovered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Punch In</th>
+                <th scope="col">Punch Out</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% timecard.forEach((timecard, index) => { %>
+                <tr>
+                    <td><%= timecard.date %></td>
+                    <td><%= moment(timecard.punch_in).format('HH:mm')  %></td>
+                    <td><%= moment(timecard.punch_out).format('HH:mm') %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+        </table>
+    <% } else { %>
+        <p class="text-center">User Not Found. Go <a href="/add">here</a> to add Users.</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const moment = require('moment');
 
 module.exports = {
     addUserPage: (req, res) => {
@@ -60,16 +61,38 @@ module.exports = {
             }
         });
     },
-    editUserPage: (req, res) => {
+    viewEmployeePage: (req, res) => {
         let userId = req.params.id;
-        let query = "SELECT * FROM biostar_tna.user WHERE id = '" + userId + "' ";
-        db.query(query, (err, result) => {
+
+        
+        let employeeQuery = "SELECT * FROM biostar2_ac.t_usr WHERE USRID = '" + userId + "' ";
+        db.query(employeeQuery, (err, employeeResult) => {
             if (err) {
                 return res.status(500).send(err);
             }
-            res.render('edit-user.ejs', {
-                user: result[0],
-                message: '',
+
+            let CFtypeQuery = "SELECT * FROM biostar2_ac.t_usrcusfld WHERE USRUID = '" + employeeResult[0].USRUID + "' and CUSFLDUID = '1'"; // biostar2_ac.t_cufldtyp & t_usrcusfld
+            db.query(CFtypeQuery, (err, CFResult) => {
+                if (err) {
+                    return res.status(500).send(err);
+                }
+            
+                let timecardQuery = "SELECT * FROM biostar_tna.timecard WHERE user_id = " + userId + " ";
+                db.query(timecardQuery, (err, timecardResult) => {
+                    if (err) {
+                        return res.status(500).send(err);
+                    }
+                    
+                    res.render('view-employee.ejs', {
+                        user: employeeResult[0],
+                        timecard: timecardResult,
+                        personnummer: CFResult.length ? CFResult[0].VAL : 'N/A',
+                        moment: moment,
+                        /* CFResult.length ? CFResult[0].VAL - frågetecknet är för att göra ett kortfattat "if else statement", kallas för ternery statement, för att om det saknas värde
+                        * så i CFResult[0].VAL så kommer : 'N/A' strängen att användas istället, när man kallas på variabeln personnummer.
+                        */
+                    });
+                });
             });
         });
     },

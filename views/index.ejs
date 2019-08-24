@@ -1,6 +1,6 @@
 <% include partials/header.ejs %>
     <div class="table-wrapper">
-        <% if (user.length > 0) {%>
+        <% if (users.length > 0) {%>
             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
@@ -15,18 +15,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% user.forEach((User, index) => { %>
+                    <% users.forEach((user, index) => { %>
                         <tr>
                             <th scope="row"><%= user.user_id %></th>
-                            <td><img src="/assets/img/<%= User.image %>" class="rounded-circle User-img" alt=""></td>
-                            <td><%= user.first_name %></td>
+                            <td><img src="/assets/img/<%= user.image %>" class="rounded-circle User-img" alt=""></td>
+                            <td><%= user.name %></td>
                             <td><%= user.last_name %></td>
                             <td><%= user.position %></td>
                             <td><%= user.number %></td>
                             <td>@<%= user.user_name %></td>
                             <td>
-                                <a href="/edit/<%= user.id %>" target="_blank" rel="noopener" class="btn btn-sm btn-success">Edit</a>
-                                <a href="/delete/<%= user.id %>" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="/employees/<%= user.user_id %>" rel="noopener" class="btn btn-sm btn-success">View</a>
                             </td>
                         </tr>
                     <% }) %>
