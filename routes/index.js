@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 module.exports = {
     getHomePage: (req, res) => {
         let query = "SELECT * FROM biostar_tna.user"; // query database to get all the Users
@@ -10,6 +12,7 @@ module.exports = {
             }
             res.render('index.ejs', {
                 users: result,
+                moment: moment,
             });
         });
     },
