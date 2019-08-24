@@ -1,23 +1,23 @@
 <% include partials/header.ejs %>
     <div class="table-wrapper">
-        <% if (users.length > 0) {%>
+        <% if (employees.length > 0) {%>
             <table class="table table-hovered">
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">User ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Create Date</th>
-                        <th scope="col">Username</th>
+                        <th scope="col">Personnummer</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% users.forEach((user, index) => { %>
+                    <% employees.forEach((employees, index) => { %>
                         <tr>
                             <th scope="row"><%= employees.USRUID %></th>
                             <td><%= employees.NM %></td>
                             <td><%= moment(employees.CREATEDT).format('YYYY-MM-DD') %></td>
-                            <td><%= employees.number %></td>
+                            <td><%= employees.USRID %></td>
                             <td>
                                 <a href="/employees/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">View</a>
                             </td>

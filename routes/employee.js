@@ -65,7 +65,7 @@ module.exports = {
         let userId = req.params.id;
 
         
-        let employeeQuery = "SELECT * FROM biostar2_ac.t_usr WHERE USRID = '" + userId + "' ";
+        let employeeQuery = "SELECT * FROM biostar2_ac.t_usr WHERE USRUID = '" + userId + "' ";
         db.query(employeeQuery, (err, employeeResult) => {
             if (err) {
                 return res.status(500).send(err);
@@ -77,14 +77,17 @@ module.exports = {
                     return res.status(500).send(err);
                 }
             
-                let timecardQuery = "SELECT * FROM biostar_tna.timecard WHERE user_id = " + userId + " ";
+                let timecardQuery = "SELECT * FROM biostar_tna.timecard WHERE user_id = " + employeeResult[0].USRID + ";";
+                /* console.log(timecardQuery)
+                console.log(userId)
+                console.log(employeeResult) */
                 db.query(timecardQuery, (err, timecardResult) => {
                     if (err) {
                         return res.status(500).send(err);
                     }
                     
                     res.render('view-employee.ejs', {
-                        user: employeeResult[0],
+                        employee: employeeResult[0],
                         timecard: timecardResult,
                         personnummer: CFResult.length ? CFResult[0].VAL : 'N/A',
                         moment: moment,

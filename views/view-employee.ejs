@@ -1,6 +1,6 @@
 <% include partials/header.ejs %>
 <div class="container">
-    <% if (user) {%>
+    <% if (employee) {%>
         <table class="table table-hovered">
             <thead class="thead-dark">
                 <tr>
@@ -12,8 +12,8 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><%= user.USRUID %></td>
-                    <td><%= user.NM %></td>
+                    <td><%= employee.USRUID %></td>
+                    <td><%= employee.NM %></td>
                     <td><%= personnummer %></td>
                     <td>
                         <a href="/" rel="noopener" class="btn btn-sm btn-success">View</a>
@@ -38,8 +38,8 @@
             <% timecard.forEach((timecard, index) => { %>
                 <tr>
                     <td><%= timecard.date %></td>
-                    <td><%= moment(timecard.punch_in).format('HH:mm')  %></td>
-                    <td><%= moment(timecard.punch_out).format('HH:mm') %></td>
+                    <td><%= timecard.punch_in ? moment(timecard.punch_in).format('HH:mm') : 'N/A' %></td>
+                    <td><%= timecard.punch_out ? moment(timecard.punch_out).format('HH:mm') : 'N/A' %></td>
                 </tr>
             <% }) %>
         </tbody>

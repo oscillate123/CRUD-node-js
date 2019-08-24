@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 
 const {getHomePage} = require('./routes/index');
-const {addUserPage, addUser, deleteUser, editUser, viewEmployeePage} = require('./routes/user');
+const {addUserPage, addUser, deleteUser, editUser, viewEmployeePage} = require('./routes/employee');
 const port = 5000;
 
 // create connection to database
@@ -16,7 +16,7 @@ const db = mysql.createConnection ({
     port: '3312',
     user: 'root',
     password: 'ThinkVision.24',
-    database: 'biostar_tna'
+    database: 'biostar2_ac'
 });
 
 // connect to database
