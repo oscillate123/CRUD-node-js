@@ -17,7 +17,7 @@
                             <th scope="row"><%= employees.USRUID %></th>
                             <td><%= employees.NM %></td>
                             <td><%= moment(employees.CREATEDT).format('YYYY-MM-DD') %></td>
-                            <td><%= employees.USRID %></td>
+                            <td><%= personnummer[employees.USRUID] %></td>
                             <td>
                                 <a href="/employees/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">View</a>
                             </td>
