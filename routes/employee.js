@@ -1,5 +1,6 @@
 const fs = require('fs');
 const moment = require('moment');
+const asyncHandler = require('express-async-handler')
 
 module.exports = {
     addUserPage: (req, res) => {
@@ -61,44 +62,27 @@ module.exports = {
             }
         });
     },
-    viewEmployeePage: (req, res) => {
+    viewEmployeePage: asyncHandler(async (req, res) => {
         let userId = req.params.id;
 
         
         let employeeQuery = "SELECT * FROM biostar2_ac.t_usr WHERE USRUID = '" + userId + "' ";
-        db.query(employeeQuery, (err, employeeResult) => {
-            if (err) {
-                return res.status(500).send(err);
-            }
+        let employeeResult = await db.query(employeeQuery);
 
-            let CFtypeQuery = "SELECT * FROM biostar2_ac.t_usrcusfld WHERE USRUID = '" + employeeResult[0].USRUID + "' and CUSFLDUID = '1'"; // biostar2_ac.t_cufldtyp & t_usrcusfld
-            db.query(CFtypeQuery, (err, CFResult) => {
-                if (err) {
-                    return res.status(500).send(err);
-                }
-            
-                let timecardQuery = "SELECT * FROM biostar_tna.timecard WHERE user_id = " + employeeResult[0].USRID + ";";
-                /* console.log(timecardQuery)
-                console.log(userId)
-                console.log(employeeResult) */
-                db.query(timecardQuery, (err, timecardResult) => {
-                    if (err) {
-                        return res.status(500).send(err);
-                    }
-                    
-                    res.render('view-employee.ejs', {
-                        employee: employeeResult[0],
-                        timecard: timecardResult,
-                        personnummer: CFResult.length ? CFResult[0].VAL : 'N/A',
-                        moment: moment,
-                        /* CFResult.length ? CFResult[0].VAL - frågetecknet är för att göra ett kortfattat "if else statement", kallas för ternery statement, för att om det saknas värde
-                        * så i CFResult[0].VAL så kommer : 'N/A' strängen att användas istället, när man kallas på variabeln personnummer.
-                        */
-                    });
-                });
-            });
+        let CFtypeQuery = "SELECT * FROM biostar2_ac.t_usrcusfld WHERE USRUID = '" + employeeResult[0].USRUID + "' and CUSFLDUID = '1'"; 
+        // biostar2_ac.t_cufldtyp & t_usrcusfld
+        let CFResult = await db.query(CFtypeQuery);
+
+        let timecardQuery = "SELECT * FROM biostar_tna.timecard WHERE user_id = " + employeeResult[0].USRID + ";";
+        let timecardResult = await db.query(timecardQuery);
+
+        res.render('view-employee.ejs', {
+            employee: employeeResult[0],
+            timecard: timecardResult,
+            personnummer: CFResult.length ? CFResult[0].VAL : 'N/A',
+            moment: moment,
         });
-    },
+    }),
     editUser: (req, res) => {
         let userId = req.params.id;
         let first_name = req.body.first_name;
