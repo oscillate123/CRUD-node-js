@@ -23,7 +23,7 @@ module.exports = {
                 personnummer: personnummer,
             });
         }catch(e){
-            res.redirect('/');
+            res.redirect('/home/');
         };
     }),
 

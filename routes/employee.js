@@ -44,7 +44,7 @@ module.exports = {
                 moment: moment,
             });
         }catch(e){
-            res.redirect('/');
+            res.redirect('/home/');
         }
     }),
 
