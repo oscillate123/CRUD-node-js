@@ -2,7 +2,9 @@ const moment = require('moment');
 const asyncHandler = require('express-async-handler');
 
 module.exports = {
+
     getHomePage: asyncHandler(async (req, res) => {
+
         try{
             let employeesListQuery = "SELECT * FROM biostar2_ac.t_usr order by NM asc;"; // query database to get all the Users
             let emplResult = await db.query(employeesListQuery);
@@ -24,4 +26,7 @@ module.exports = {
             res.redirect('/');
         };
     }),
+
+    // new object here
+
 };

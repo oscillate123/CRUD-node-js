@@ -6,7 +6,7 @@ const path = require('path');
 const app = express();
 
 const {getHomePage} = require('./routes/index');
-const {addUserPage, addUser, deleteUser, editUser, viewEmployeePage} = require('./routes/employee');
+const {viewEmployeePage, /* add extra objects here, if objects been created in employee.js */} = require('./routes/employee');
 const port = 5000;
 
 // create connection to database
@@ -16,7 +16,8 @@ const db = mysql.createConnection ({
     port: '3312',
     user: 'root',
     password: 'ThinkVision.24',
-    database: 'biostar2_ac'
+    database2_ac: 'biostar2_ac',
+    database_tna: 'biostar_tna',
 }).then((db) => {
     global.db = db;
 
@@ -32,11 +33,7 @@ const db = mysql.createConnection ({
     // routes for the app
     
     app.get('/', getHomePage);
-    app.get('/add', addUserPage);
     app.get('/employees/:id', viewEmployeePage);
-    app.get('/delete/:id', deleteUser);
-    app.post('/add', addUser);
-    app.post('/edit/:id', editUser);
     
     
     // set the app to listen on the port
