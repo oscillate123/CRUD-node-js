@@ -6,6 +6,8 @@ module.exports = {
     viewEmployeePage: asyncHandler(async (req, res) => {
 
         let userId = req.params.id;
+        let start = req.query.start ? moment(req.query.start) : false;
+        let end = req.query.end ? moment(req.query.end) : false;
 
         try{
             let employeeQuery = "SELECT * FROM biostar2_ac.t_usr WHERE USRUID = '" + userId + "' ";
@@ -18,9 +20,26 @@ module.exports = {
             let timecardQuery = "SELECT * FROM biostar_tna.timecard WHERE user_id = " + employeeResult[0].USRID + ";";
             let timecardResult = await db.query(timecardQuery);
 
+            // Remove time entries not within specified time span
+            let filteredTimecardResult = timecardResult.filter((timeEntry) => {
+                let timeEntryDate = moment(timeEntry.date);
+                                
+                if (start != false && start > timeEntryDate){
+                    console.log('Removed: ' + timeEntryDate);
+                    return false;
+                } 
+
+                if (end != false && end < timeEntryDate){
+                    console.log('Removed: ' + timeEntryDate);
+                    return false;
+                }
+
+                return true;
+            });
+
             res.render('view-employee.ejs', {
                 employee: employeeResult[0],
-                timecard: timecardResult,
+                timecard: filteredTimecardResult,
                 personnummer: CFResult.length ? CFResult[0].VAL : 'N/A',
                 moment: moment,
             });

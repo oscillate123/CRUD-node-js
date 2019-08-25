@@ -7,7 +7,7 @@
                     <th scope="col">User ID</th> <!-- biostar2_ac.t_usr.usruid! --> 
                     <th scope="col">Name</th>
                     <th scope="col">Personnummer</th>
-                    <th scope="col">View Employee list</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -16,7 +16,7 @@
                     <td><%= employee.NM %></td>
                     <td><%= personnummer %></td>
                     <td>
-                        <a href="/" rel="noopener" class="btn btn-sm btn-success">View</a>
+                        <a href="/" rel="noopener" class="btn btn-sm btn-success">View Employee List Again</a>
                     </td>
                 </tr>
             </tbody>
@@ -26,6 +26,17 @@
     <% } %>
 
     <% if (timecard.length) { %>
+        <form>
+            <label>
+                From:
+                <input name="start" type="date" class="form-control"></input>
+            </label>
+            <label>
+                To:
+                <input name="end" type="date" class="form-control"></input>
+            </label>
+            <button type="submit" class="btn btn-sm btn-success">Filter</button>
+        </form>
         <table class="table table-hovered">
         <thead class="thead-dark">
             <tr>
