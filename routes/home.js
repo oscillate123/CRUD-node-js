@@ -3,7 +3,7 @@ const asyncHandler = require('express-async-handler');
 
 module.exports = {
 
-    viewEmployeesPage: asyncHandler(async (req, res) => {
+    getHomePage: asyncHandler(async (req, res) => {
 
         try{
             let employeesListQuery = "SELECT * FROM biostar2_ac.t_usr order by NM asc;"; // query database to get all the Users
@@ -17,7 +17,7 @@ module.exports = {
                 personnummer[cf.USRUID] = cf.VAL;
             }),
 
-            res.render('index.ejs', {
+            res.render('homepage.ejs', {
                 employees: emplResult,
                 moment: moment,
                 personnummer: personnummer,

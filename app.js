@@ -5,8 +5,10 @@ const mysql = require('promise-mysql');
 const path = require('path');
 const app = express();
 
-const {getHomePage} = require('./routes/index');
-const {viewEmployeePage, /* add extra objects here, if objects been created in employee.js */} = require('./routes/employee');
+const {signin} = require('./routes/signin');
+const {getHomePage,} = require('./routes/home');
+const {viewEmployeesPage,} = require('./routes/index');
+const {viewEmployeePage,} = require('./routes/employee');
 const port = 5000;
 
 // create connection to database
@@ -32,8 +34,10 @@ const db = mysql.createConnection ({
     
     // routes for the app
     
-    app.get('/', getHomePage);
-    app.get('/employees/:id', viewEmployeePage);
+    app.get('/', signin);
+    app.get('/home/', getHomePage);
+    app.get('/employees/', viewEmployeesPage);
+    app.get('/employee/:id', viewEmployeePage);
     
     
     // set the app to listen on the port
