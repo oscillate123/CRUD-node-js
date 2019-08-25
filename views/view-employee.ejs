@@ -1,23 +1,31 @@
 <% include partials/header.ejs %>
-<div class="container">
+<div class="page-wrapper">
     <% if (employee) {%>
-        <table class="table table-hovered">
+        <table class="table table-sm">
             <thead class="thead-dark">
                 <tr>
+                    <th scope="col">     </th>
+                    <th scope="col">     </th>
+                    <th scope="col">     </th>
+                    <th scope="col">     </th>
+                    <th scope="col">     </th>
+                    <th scope="col">     </th>
                     <th scope="col">User ID</th> <!-- biostar2_ac.t_usr.usruid! --> 
                     <th scope="col">Name</th>
                     <th scope="col">Personnummer</th>
-                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td>     </td>
+                    <td>     </td>
+                    <td>     </td>
+                    <td>     </td>
+                    <td>     </td>
+                    <td>     </td>
                     <td><%= employee.USRUID %></td>
                     <td><%= employee.NM %></td>
                     <td><%= personnummer %></td>
-                    <td>
-                        <a href="/" rel="noopener" class="btn btn-sm btn-success">View Employee List Again</a>
-                    </td>
                 </tr>
             </tbody>
         </table>
@@ -26,6 +34,7 @@
     <% } %>
 
     <% if (timecard.length) { %>
+        <div class="container">
         <form>
             <label>
                 From:
@@ -35,9 +44,10 @@
                 To:
                 <input name="end" type="date" class="form-control"></input>
             </label>
-            <button type="submit" class="btn btn-sm btn-success">Filter</button>
+            <button type="submit" class="btn btn-sm btn-success">📆 Filter View</button>
+            <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Print View</button>
         </form>
-        <table class="table table-hovered">
+        <table class="table table-sm table-striped">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">Date</th>
@@ -55,6 +65,7 @@
             <% }) %>
         </tbody>
         </table>
+        </div>
     <% } else { %>
         <p class="text-center">User Not Found. Go <a href="/add">here</a> to add Users.</p>
     <% } %>
