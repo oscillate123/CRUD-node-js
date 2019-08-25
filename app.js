@@ -7,7 +7,7 @@ const app = express();
 
 const {signin} = require('./routes/signin');
 const {getHomePage,} = require('./routes/home');
-const {viewEmployeesPage,} = require('./routes/index');
+const {viewEmployeesPage,} = require('./routes/list-employees');
 const {viewEmployeePage,} = require('./routes/employee');
 const port = 5000;
 

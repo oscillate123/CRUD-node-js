@@ -17,7 +17,7 @@ module.exports = {
                 personnummer[cf.USRUID] = cf.VAL;
             }),
 
-            res.render('index.ejs', {
+            res.render('list-employees.ejs', {
                 employees: emplResult,
                 moment: moment,
                 personnummer: personnummer,
