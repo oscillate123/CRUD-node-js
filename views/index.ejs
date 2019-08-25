@@ -7,7 +7,7 @@
                         <th scope="col">User ID</th>
                         <th scope="col">Name</th>
                         <th scope="col">Create Date</th>
-                        <th scope="col">Personnummer</th>
+                        <th scope="col">Social Security Number</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -19,7 +19,7 @@
                             <td><%= moment(employees.CREATEDT).format('YYYY-MM-DD') %></td>
                             <td><%= personnummer[employees.USRUID] %></td>
                             <td>
-                                <a href="/employees/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">View</a>
+                                <a href="/employees/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">View Timecard</a>
                             </td>
                         </tr>
                     <% }) %>
