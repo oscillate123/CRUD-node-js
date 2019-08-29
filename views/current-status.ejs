@@ -1,0 +1,69 @@
+<% include partials/header.ejs %>
+<div class="page-wrapper">
+        <table class="table table-sm">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Juridisk Person</th>
+                    <th scope="col">Organisationsnummer</th>
+                    <th scope="col">Arbetsplatsens namn</th>
+                    <th scope="col">Arbetsplatsens gatuadress, postnummer och ort</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Burger King Sverige AB</td>
+                    <td>123456-7890</td>
+                    <td>Burger King Sergelgatan 1</td>
+                    <td>Sergelgatan 1, 114 35 Stockholm</td>
+                </tr>
+            </tbody>
+        </table>
+<div class="container">
+    <form>
+        <label>
+            From:
+            <input name="start" type="date" class="form-control"></input>
+        </label>
+        <label>
+            To:
+            <input name="end" type="date" class="form-control"></input>
+        </label>
+        <button type="submit" class="btn btn-sm btn-success">📆 Filter View</button>
+        <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Print View</button>
+    </form>
+</div>
+
+    <% if (timecard.length) { %>
+        <div class="container">
+        <table class="table table-sm table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">För- och efternamn</th>
+                    <th scope="col">Personnummer</th>
+                    <th scope="col">Punch In</th>
+                    <th scope="col">Punch Out</th>
+                    <th scope="col">Ändrat av</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% timecard.forEach((timecard, index) => { %>
+                    <tr>
+                        <td><%= timecard.date %></td>
+                        <td><%= JSON.parse(timecard.user).name %></td>
+                        <td><%= personnummer[usruids[JSON.parse(timecard.user).user_id]] %></td>
+                        <td><%= timecard.punch_in ? moment(timecard.punch_in).format('HH:mm') : '' %></td>
+                        <td><%= timecard.punch_out ? moment(timecard.punch_out).format('HH:mm') : '' %></td>
+                        <td><%= getTimecardModifications(timecard, modLookup) %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        </div>
+    <% } else { %>
+        <p class="text-center"> No Data Found. Click <a href="/">here</a> to get back.</p>
+    <% } %>
+</div>
+</div>
+</body>
+</html>
