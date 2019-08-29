@@ -4,14 +4,20 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
                     <th scope="col">Juridisk Person</th>
                     <th scope="col">Organisationsnummer</th>
                     <th scope="col">Arbetsplatsens namn</th>
-                    <th scope="col">Arbetsplatsens gatuadress, postnummer och ort</th>
+                    <th scope="col">Adress, postnummer & ort</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td>Burger King Sverige AB</td>
                     <td>123456-7890</td>
@@ -20,31 +26,34 @@
                 </tr>
             </tbody>
         </table>
+        <br>
 <div class="container">
-            <button type="submit" class="btn btn-sm btn-success">📆 Filter View</button>
-            <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Print View</button>
     <form>
         <label>
-            From:
+            Från:
             <input name="start" type="date" class="form-control"></input>
         </label>
         <label>
-            To:
+            Till:
             <input name="end" type="date" class="form-control"></input>
         </label>
+        <br>
+        <button type="submit" class="btn btn-sm btn-success">📆 Filtrera Vy</button>
+        <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Skriv ut Vy</button>
     </form>
 </div>
 
     <% if (timecard.length) { %>
         <div class="container">
         <table class="table table-sm table-striped">
+            <br>
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Date</th>
+                    <th scope="col">Datum</th>
                     <th scope="col">För- och efternamn</th>
                     <th scope="col">Personnummer</th>
-                    <th scope="col">Punch In</th>
-                    <th scope="col">Punch Out</th>
+                    <th scope="col">Tid in</th>
+                    <th scope="col">Tid ut</th>
                     <th scope="col">Ändrat av</th>
                 </tr>
             </thead>
@@ -63,7 +72,8 @@
         </table>
         </div>
     <% } else { %>
-        <p class="text-center"> No Data Found. Click <a href="/">here</a> to get back.</p>
+        <br>
+        <p class="text-center"> Ingen data finns registrerad idag. Tips är att använda sig av från-till filtret!</p>
     <% } %>
 </div>
 </div>

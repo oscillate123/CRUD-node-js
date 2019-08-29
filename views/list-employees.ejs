@@ -4,22 +4,28 @@
             <table class="table table-sm table-striped">
                 <thead class="thead-dark">
                     <tr>
-                        <th scope="col">User ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Create Date</th>
-                        <th scope="col">Social Security Number</th>
-                        <th scope="col">Action</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">System ID</th>
+                        <th scope="col">Namn</th>
+                        <th scope="col">Konto skapat</th>
+                        <th scope="col">Personnummer</th>
+                        <th scope="col">Funktion</th>
                     </tr>
                 </thead>
                 <tbody>
                     <% employees.forEach((employees, index) => { %>
                         <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <th scope="row"><%= employees.USRUID %></th>
                             <td><%= employees.NM %></td>
                             <td><%= moment(employees.CREATEDT).format('YYYY-MM-DD') %></td>
                             <td><%= personnummer[employees.USRUID] %></td> <!--personnummer[employees.USRUID]-->
                             <td>
-                                <a href="/employee/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">View Timecard</a>
+                                <a href="/employee/<%= employees.USRUID %>" rel="noopener" class="btn btn-sm btn-success">Visa Tidskort</a>
                             </td>
                         </tr>
                     <% }) %>

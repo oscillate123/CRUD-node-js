@@ -19,12 +19,12 @@ function getTimecardModifications(timecard, modLookup){
     // return Array.from(new Set([punchInMod, punchInMod])).filter(Boolean).join(', ');
 
     if(punchInMod && punchOutMod && ( punchInMod !== punchOutMod )){
-        return 'IN: ' + punchInMod + ', OUT: ' + punchOutMod;
+        return 'In: ' + punchInMod + ', Ut: ' + punchOutMod;
     }else{
         if(punchInMod){
-            return 'IN' + (punchInMod === punchOutMod ? ' & OUT' : '') + ': ' + punchInMod;
+            return 'In' + (punchInMod === punchOutMod ? ' & Ut' : '') + ': ' + punchInMod;
         }else if(punchOutMod){
-            return 'OUT: ' + punchOutMod;
+            return 'Ut: ' + punchOutMod;
         }
     }
 }

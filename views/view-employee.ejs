@@ -10,8 +10,8 @@
                     <th scope="col">     </th>
                     <th scope="col">     </th>
                     <th scope="col">     </th>
-                    <th scope="col">User ID</th> <!-- biostar2_ac.t_usr.usruid! --> 
-                    <th scope="col">Name</th>
+                    <th scope="col">System ID</th> <!-- biostar2_ac.t_usr.usruid! --> 
+                    <th scope="col">För- & efternamn</th>
                     <th scope="col">Personnummer</th>
                 </tr>
             </thead>
@@ -30,7 +30,7 @@
             </tbody>
         </table>
     <% } else { %>
-        <p class="text-center">An error has occurd. Please contact support. <a href="/"> Go back to employee list</a></p>
+        <p class="text-center">An error has occurd. Please contact system administrator. <a href="/"> Go back to employee list</a></p>
     <% } %>
 
     <% if (timecard.length) { %>
@@ -44,15 +44,15 @@
                 To:
                 <input name="end" type="date" class="form-control"></input>
             </label>
-            <button type="submit" class="btn btn-sm btn-success">📆 Filter View</button>
-            <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Print View</button>
+            <button type="submit" class="btn btn-sm btn-success">📆 Filtrera Vy</button>
+            <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Skriv ut Vy</button>
         </form>
         <table class="table table-sm table-striped">
         <thead class="thead-dark">
             <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Punch In</th>
-                <th scope="col">Punch Out</th>
+                <th scope="col">Datum</th>
+                <th scope="col">Tid in</th>
+                <th scope="col">Tid ut</th>
             </tr>
         </thead>
         <tbody>
@@ -67,7 +67,7 @@
         </table>
         </div>
     <% } else { %>
-        <p class="text-center">No Data Found. Click <a href="/">here</a> to get back.</p>
+        <p class="text-center">No Data Found. Click <a href="/">here</a> to get back to homepage.</p>
     <% } %>
 </div>
 </div>
