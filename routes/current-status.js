@@ -32,7 +32,7 @@ function getTimecardModifications(timecard, modLookup){
 module.exports = {
 
     currentStatus: asyncHandler(async (req, res) => {
-        let currentDate = moment().format('YYYY-MM-DD');
+        let currentDate = moment('2019-08-10').format('YYYY-MM-DD');
         let start = req.query.start ? moment(req.query.start) : moment(currentDate);
         let end = req.query.end ? moment(req.query.end) : false;
     
@@ -74,11 +74,15 @@ module.exports = {
                 modLookup[JSON.stringify(key)] = modification.modified_by_user_name
             });
 
+            // console.log(timecardResult)
+
             let filteredTimecardResult = timecardResult.filter((timeEntry) => {
                 let timeEntryDate = moment(timeEntry.date);
+                let punch_in = timeEntry.punch_in
+                let punch_out = timeEntry.punch_out
                                 
                 if (start != false && start > timeEntryDate){
-                    console.log('Removed: ' + timeEntryDate);
+                    console.log('Removed: ' + timeEntryDate + ' Reason');
                     return false;
                 } 
 
@@ -87,9 +91,14 @@ module.exports = {
                     return false;
                 }
 
+                if (punch_in === null && punch_out === null){
+                    console.log('Removed: ' + punch_in + " on " + timeEntryDate)
+                    console.log('Removed: ' + punch_out + " on " + timeEntryDate)
+                    return false;
+                }
                 return true;
             });
-            
+
             res.render('current-status.ejs', {
                 timecard: filteredTimecardResult,
                 personnummer: personnummer,
@@ -123,5 +132,18 @@ SELECT * FROM biostar2_ac.t_usr ORDER BY USRUID;
                 <th scope="col">Punch In</th>
                 <th scope="col">Punch Out</th>
                 <th scope="col">Ändrat av</th>
+
+
+Det du har gjort är fantastiskt, det som inte finns är 
+
+1 att man kan välja användargrupper som ska visas. 
+2 att man kan välja vilka användare som ska visas (bockrutor).
+  (Detta finns redan i rapportfunktionen)
+3 en till kolumn som visar den totala arbetstiden för  den anställdas arbetsdag (beräkning detta finns i rapporten idag) .
+4 filtrera ut ur användare som varken har en in eller utstämpling från rapporten.
+5 Logga in i systemet
+
+Sen kommer massa andra saker som behövs men som jag tror att jag själv kan göra i framtiden
+
 
 */
