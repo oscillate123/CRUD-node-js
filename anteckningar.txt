@@ -1,0 +1,23 @@
+Prisalternativ:
+
+1. 15.000 kumrif (kontant utan moms rakt ner i fickan :))
+2. 25.000 fakturerat inkl. moms
+3. 18.000 fakturerat inkl. moms - 4% andelar
+4. 14.000 fakturerat inkl. moms - 8% andelar
+
+Kom ihåg att du får tillbaka moms om du inte fakturerar kund i år, 
+och om du fakturerar kund mer än momsen på fakturan så betalar du mindre moms till skatteverket.
+utgående moms - ingående moms = moms du betalar/får tillbaka
+om du har kunder under 2019, kan det vara värt för företaget du startar att välja faktura
+
+
+
+1 att man kan välja användargrupper som ska visas. 
+2 att man kan välja vilka användare som ska visas (bockrutor).
+(Detta finns redan i rapportfunktionen i BioStar)
+3 en till kolumn som visar den totala arbetstiden för  den anställdas arbetsdag (beräkning detta finns i rapporten idag) .
+4 filtrera ut ur användare som varken har en in eller utstämpling från rapporten.
+5 Logga in i systemet
+
+Sen kommer massa andra saker som behövs men som jag tror att jag själv kan göra i framtiden
+

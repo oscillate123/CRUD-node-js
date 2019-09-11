@@ -6,11 +6,18 @@ const path = require('path');
 const app = express();
 
 const {currentStatus} = require('./routes/current-status');
-const {signin} = require('./routes/signin');
-const {getHomePage,} = require('./routes/home');
-const {viewEmployeesPage,} = require('./routes/list-employees');
-const {viewEmployeePage,} = require('./routes/employee');
-const port = 5000;
+const {viewEmployeesPage} = require('./routes/list-employees');
+const {viewEmployeePage} = require('./routes/employee');
+const port = 5005;
+const basicAuth = require('express-basic-auth')
+ 
+app.use(basicAuth({
+    challenge: true,
+    users: { 
+        'admin': 'Biometrix123abc',
+        'oscar': 'ThinkVision.24'
+ }
+}))
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
@@ -36,8 +43,8 @@ const db = mysql.createConnection ({
     // routes for the app
     
     app.get('/current-status/', currentStatus);
-    app.get('/', signin);
-    app.get('/home/', getHomePage);
+    // app.get('/', (_, res) => res.render('signin.ejs'));
+    app.get('/', (_, res) => res.render('homepage.ejs'));
     app.get('/employees/', viewEmployeesPage);
     app.get('/employee/:id', viewEmployeePage);
     

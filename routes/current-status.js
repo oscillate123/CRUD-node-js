@@ -32,9 +32,10 @@ function getTimecardModifications(timecard, modLookup){
 module.exports = {
 
     currentStatus: asyncHandler(async (req, res) => {
-        let currentDate = moment('2019-08-10').format('YYYY-MM-DD');
+        let currentDate = moment().format('YYYY-MM-DD');
         let start = req.query.start ? moment(req.query.start) : moment(currentDate);
         let end = req.query.end ? moment(req.query.end) : false;
+        let group = req.query.group;
     
         try{
             
@@ -50,6 +51,10 @@ module.exports = {
             let modQuery = "SELECT * FROM biostar_tna.modifiedpunchlog;";
             let modResult = await db.query(modQuery);
 
+            let groupQuery = "SELECT * FROM biostar2_ac.t_usrgr;";
+            let groupResult = await db.query(groupQuery);
+
+
             // Personnummer lookup (key = USRUID)
             let personnummer = {};
             CFResult.forEach((cf) => {
@@ -60,6 +65,18 @@ module.exports = {
             let usruids = {};
             employeeResult.forEach((employee) => {
                 usruids[employee.USRID] = employee.USRUID;
+            });
+
+            // User Group (key = USRUID)
+            let usr_group = {};
+            employeeResult.forEach((employee) => {
+                usr_group[employee.USRUID] = employee.USRGRUID;
+            });
+
+            // User Group name (key = USRGRUID) 
+            let usr_group_names = {};
+            groupResult.forEach((group) => {
+                usr_group_names[group.USRGRUID] = group.NM;
             });
 
             // MOD lookup
@@ -80,24 +97,31 @@ module.exports = {
                 let timeEntryDate = moment(timeEntry.date);
                 let punch_in = timeEntry.punch_in
                 let punch_out = timeEntry.punch_out
+                let group_id = usr_group[usruids[JSON.parse(timeEntry.user).user_id]]
                                 
                 if (start != false && start > timeEntryDate){
-                    console.log('Removed: ' + timeEntryDate + ' Reason');
+                    // console.log('Removed: ' + timeEntryDate + ' Reason');
                     return false;
                 } 
 
                 if (end != false && end < timeEntryDate){
-                    console.log('Removed: ' + timeEntryDate);
+                    // console.log('Removed: ' + timeEntryDate);
                     return false;
                 }
 
                 if (punch_in === null && punch_out === null){
-                    console.log('Removed: ' + punch_in + " on " + timeEntryDate)
-                    console.log('Removed: ' + punch_out + " on " + timeEntryDate)
+                    // console.log('Removed: ' + punch_in + " on " + timeEntryDate)
+                    // console.log('Removed: ' + punch_out + " on " + timeEntryDate)
                     return false;
                 }
+
+                if (group_id != group && group != undefined){
+                    return false;
+                }
+
                 return true;
             });
+
 
             res.render('current-status.ejs', {
                 timecard: filteredTimecardResult,
@@ -106,10 +130,12 @@ module.exports = {
                 modLookup: modLookup,
                 getTimecardModifications: getTimecardModifications,
                 moment: moment,
+                usr_group: usr_group,
+                usr_group_names: usr_group_names,
             });
         }catch(e){
             console.error(e);
-            res.redirect('/home/');
+            res.redirect('/');
         }
     }),
 

@@ -19,10 +19,10 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>Burger King Sverige AB</td>
+                    <td>Namn hos bolagsverket</td>
                     <td>123456-7890</td>
-                    <td>Burger King Sergelgatan 1</td>
-                    <td>Sergelgatan 1, 114 35 Stockholm</td>
+                    <td>Restaurang pärlan</td>
+                    <td>Sveavägen 123, 123 45 Farsta</td>
                 </tr>
             </tbody>
         </table>
@@ -37,9 +37,15 @@
             Till:
             <input name="end" type="date" class="form-control"></input>
         </label>
+        <label>
+            Avdelning:
+            <select name="group" class="form-control">
+                <option value="1004">1004</option>
+            </select>
+        </label>
         <br>
-        <button type="submit" class="btn btn-sm btn-success">📆 Filtrera Vy</button>
-        <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Skriv ut Vy</button>
+        <button type="submit" class="btn btn-sm btn-success">📆 Filtrera vy</button>
+        <button class="btn btn-sm btn-primary" onclick="window.print();return false;">🖨️ Skriv ut vy</button>
     </form>
 </div>
 
@@ -52,6 +58,7 @@
                     <th scope="col">Datum</th>
                     <th scope="col">För- och efternamn</th>
                     <th scope="col">Personnummer</th>
+                    <th scope="col">Avdelning</th>
                     <th scope="col">Tid in</th>
                     <th scope="col">Tid ut</th>
                     <th scope="col">Ändrat av</th>
@@ -63,6 +70,7 @@
                         <td><%= timecard.date %></td>
                         <td><%= JSON.parse(timecard.user).name %></td>
                         <td><%= personnummer[usruids[JSON.parse(timecard.user).user_id]] %></td>
+                        <td><%= usr_group_names[usr_group[usruids[JSON.parse(timecard.user).user_id]]] %></td>
                         <td><%= timecard.punch_in ? moment(timecard.punch_in).format('HH:mm') : '' %></td>
                         <td><%= timecard.punch_out ? moment(timecard.punch_out).format('HH:mm') : '' %></td>
                         <td><%= getTimecardModifications(timecard, modLookup) %></td>
