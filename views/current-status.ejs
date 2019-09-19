@@ -31,16 +31,19 @@
     <form>
         <label>
             Från:
-            <input name="start" type="date" class="form-control"></input>
+            <input name="start" type="date" class="form-control" value="<%= moment(start).format('YYYY-MM-DD') %>"></input>
         </label>
         <label>
             Till:
-            <input name="end" type="date" class="form-control"></input>
+            <input name="end" type="date" class="form-control" value="<%= moment(end).format('YYYY-MM-DD') %>"></input>
         </label>
         <label>
             Avdelning:
             <select name="group" class="form-control">
-                <option value="1004">1004</option>
+                <option value="">All</option>
+                <% groups.forEach(group => { %>
+                    <option value="<%= group.USRGRUID %>" <%= group.USRGRUID == selectedGroup ? 'selected' : '' %>><%= group.NM %></option>
+                <% }) %>
             </select>
         </label>
         <br>
@@ -71,8 +74,8 @@
                         <td><%= JSON.parse(timecard.user).name %></td>
                         <td><%= personnummer[usruids[JSON.parse(timecard.user).user_id]] %></td>
                         <td><%= usr_group_names[usr_group[usruids[JSON.parse(timecard.user).user_id]]] %></td>
-                        <td><%= timecard.punch_in ? moment(timecard.punch_in).format('HH:mm') : '' %></td>
-                        <td><%= timecard.punch_out ? moment(timecard.punch_out).format('HH:mm') : '' %></td>
+                        <td><%= timecard.punch_in ? moment.utc(timecard.punch_in).utcOffset(offset).format('HH:mm') : '' %></td>
+                        <td><%= timecard.punch_out ? moment.utc(timecard.punch_out).utcOffset(offset).format('HH:mm') : ''%></td>
                         <td><%= getTimecardModifications(timecard, modLookup) %></td>
                     </tr>
                 <% }) %>

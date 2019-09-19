@@ -42,9 +42,9 @@ const db = mysql.createConnection ({
     
     // routes for the app
     
-    app.get('/current-status/', currentStatus);
+    app.get('/', currentStatus);
     // app.get('/', (_, res) => res.render('signin.ejs'));
-    app.get('/', (_, res) => res.render('homepage.ejs'));
+    app.get('/xx/', (_, res) => res.render('homepage.ejs'));
     app.get('/employees/', viewEmployeesPage);
     app.get('/employee/:id', viewEmployeePage);
     

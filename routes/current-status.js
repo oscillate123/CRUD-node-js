@@ -42,7 +42,7 @@ module.exports = {
             let employeeQuery = "SELECT * FROM biostar2_ac.t_usr ORDER BY USRUID;"
             let employeeResult = await db.query(employeeQuery);
 
-            let timecardQuery = "SELECT * FROM biostar_tna.timecard;";
+            let timecardQuery = "SELECT * FROM biostar_tna.timecard ORDER BY date DESC;";
             let timecardResult = await db.query(timecardQuery);
 
             let CFtypeQuery = "SELECT * FROM biostar2_ac.t_usrcusfld WHERE CUSFLDUID = '1'";
@@ -51,7 +51,7 @@ module.exports = {
             let modQuery = "SELECT * FROM biostar_tna.modifiedpunchlog;";
             let modResult = await db.query(modQuery);
 
-            let groupQuery = "SELECT * FROM biostar2_ac.t_usrgr;";
+            let groupQuery = "SELECT * FROM biostar2_ac.t_usrgr WHERE DEP = 1;";
             let groupResult = await db.query(groupQuery);
 
 
@@ -115,7 +115,7 @@ module.exports = {
                     return false;
                 }
 
-                if (group_id != group && group != undefined){
+                if (group_id != group && group){
                     return false;
                 }
 
@@ -130,8 +130,13 @@ module.exports = {
                 modLookup: modLookup,
                 getTimecardModifications: getTimecardModifications,
                 moment: moment,
+                offset: moment().utcOffset()+120, // CHANGE TIMEZONE HERE IF THE TIME IS OFF IN THE VIEW - IT IS NOT MY FAULT OK?!?!?!? This number needs to be changed, depending on the server it is installed on!!! This is BioStars fault.
                 usr_group: usr_group,
                 usr_group_names: usr_group_names,
+                groups: groupResult,
+                start: start,
+                end: end,
+                selectedGroup: group,
             });
         }catch(e){
             console.error(e);
