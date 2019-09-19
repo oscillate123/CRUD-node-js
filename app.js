@@ -6,8 +6,6 @@ const path = require('path');
 const app = express();
 
 const {currentStatus} = require('./routes/current-status');
-const {viewEmployeesPage} = require('./routes/list-employees');
-const {viewEmployeePage} = require('./routes/employee');
 const port = 5005;
 const basicAuth = require('express-basic-auth')
  
@@ -43,10 +41,6 @@ const db = mysql.createConnection ({
     // routes for the app
     
     app.get('/', currentStatus);
-    // app.get('/', (_, res) => res.render('signin.ejs'));
-    app.get('/xx/', (_, res) => res.render('homepage.ejs'));
-    app.get('/employees/', viewEmployeesPage);
-    app.get('/employee/:id', viewEmployeePage);
     
     
     // set the app to listen on the port
