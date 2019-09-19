@@ -16,8 +16,6 @@ function getTimecardModifications(timecard, modLookup){
     let punchInMod = modLookup[JSON.stringify(punchInKey)];
     let punchOutMod = modLookup[JSON.stringify(punchOutKey)]
 
-    // return Array.from(new Set([punchInMod, punchInMod])).filter(Boolean).join(', ');
-
     if(punchInMod && punchOutMod && ( punchInMod !== punchOutMod )){
         return 'In: ' + punchInMod + ', Ut: ' + punchOutMod;
     }else{
@@ -91,8 +89,6 @@ module.exports = {
                 modLookup[JSON.stringify(key)] = modification.modified_by_user_name
             });
 
-            // console.log(timecardResult)
-
             let filteredTimecardResult = timecardResult.filter((timeEntry) => {
                 let timeEntryDate = moment(timeEntry.date);
                 let punch_in = timeEntry.punch_in
@@ -100,18 +96,14 @@ module.exports = {
                 let group_id = usr_group[usruids[JSON.parse(timeEntry.user).user_id]]
                                 
                 if (start != false && start > timeEntryDate){
-                    // console.log('Removed: ' + timeEntryDate + ' Reason');
                     return false;
                 } 
 
                 if (end != false && end < timeEntryDate){
-                    // console.log('Removed: ' + timeEntryDate);
                     return false;
                 }
 
                 if (punch_in === null && punch_out === null){
-                    // console.log('Removed: ' + punch_in + " on " + timeEntryDate)
-                    // console.log('Removed: ' + punch_out + " on " + timeEntryDate)
                     return false;
                 }
 
@@ -121,7 +113,6 @@ module.exports = {
 
                 return true;
             });
-
 
             res.render('current-status.ejs', {
                 timecard: filteredTimecardResult,
@@ -143,38 +134,4 @@ module.exports = {
             res.redirect('/');
         }
     }),
-
-    // new object here
-
 };
-
-
-/* 
-
-// SELECT * FROM biostar_tna.modifiedpunchlog;
-
-SELECT * FROM biostar_tna.punchlog;
-
-SELECT * FROM biostar2_ac.t_usr ORDER BY USRUID;
-
-<th scope="col">Date</th>
-                <th scope="col">För- och efternamn</th>
-                <th scope="col">Personnummer</th>
-                <th scope="col">Punch In</th>
-                <th scope="col">Punch Out</th>
-                <th scope="col">Ändrat av</th>
-
-
-Det du har gjort är fantastiskt, det som inte finns är 
-
-1 att man kan välja användargrupper som ska visas. 
-2 att man kan välja vilka användare som ska visas (bockrutor).
-  (Detta finns redan i rapportfunktionen)
-3 en till kolumn som visar den totala arbetstiden för  den anställdas arbetsdag (beräkning detta finns i rapporten idag) .
-4 filtrera ut ur användare som varken har en in eller utstämpling från rapporten.
-5 Logga in i systemet
-
-Sen kommer massa andra saker som behövs men som jag tror att jag själv kan göra i framtiden
-
-
-*/

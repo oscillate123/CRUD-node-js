@@ -24,8 +24,6 @@ const db = mysql.createConnection ({
     port: '3312',
     user: 'root',
     password: 'ThinkVision.24',
-    database2_ac: 'biostar2_ac',
-    database_tna: 'biostar_tna',
 }).then((db) => {
     global.db = db;
 
@@ -39,7 +37,6 @@ const db = mysql.createConnection ({
     app.use(fileUpload()); // configure fileupload
     
     // routes for the app
-    
     app.get('/', currentStatus);
     
     
@@ -48,12 +45,3 @@ const db = mysql.createConnection ({
         console.log(`Server running on port: ${port}`);
     });
 });
-
-// connect to database
-/*db.connect((err) => {
-    if (err) {
-        throw err;
-    }
-    console.log('Connected to database');
-});*/
-
