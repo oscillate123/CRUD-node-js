@@ -14,7 +14,7 @@ app.use(basicAuth({
     users: { 
         'admin': 'Biometrix123abc',
         'oscar': 'ThinkVision.24'
- }
+    }
 }))
 
 // create connection to database

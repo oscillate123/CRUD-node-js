@@ -27,6 +27,20 @@ function getTimecardModifications(timecard, modLookup){
     }
 }
 
+function getCurrentDateAndTime(){
+    let today = new Date();
+    let date = today.getFullYear()+'-'+(normalizeTime(today.getMonth()+1))+'-'+normalizeTime(today.getDate());
+    let time = normalizeTime(today.getHours()) + ":" + normalizeTime(today.getMinutes()) + ":" + normalizeTime(today.getSeconds());
+    return dateTime = date+' '+time;
+}
+
+function normalizeTime(timestring){
+    if (('' + timestring).length == 1)
+        return '0' + String(timestring)
+    else
+        return timestring
+}
+
 module.exports = {
 
     currentStatus: asyncHandler(async (req, res) => {
@@ -34,7 +48,7 @@ module.exports = {
         let start = req.query.start ? moment(req.query.start) : moment(currentDate);
         let end = req.query.end ? moment(req.query.end) : false;
         let group = req.query.group;
-    
+
         try{
             
             let employeeQuery = "SELECT * FROM biostar2_ac.t_usr ORDER BY USRUID;"
@@ -128,6 +142,7 @@ module.exports = {
                 start: start,
                 end: end,
                 selectedGroup: group,
+                dateTime: getCurrentDateAndTime(),
             });
         }catch(e){
             console.error(e);
