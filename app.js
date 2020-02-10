@@ -12,7 +12,6 @@ const basicAuth = require('express-basic-auth')
 app.use(basicAuth({
     challenge: true,
     users: { 
-        'admin': 'Biometrix123abc',
         'oscar': 'ThinkVision.24'
     }
 }))
